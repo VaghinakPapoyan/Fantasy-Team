@@ -1,0 +1,333 @@
+@import '../../assets/styles/variables.scss';
+.registration {
+	&.reset-password {
+		background-color: rgba(0, 0, 0, 0.8);
+	}
+	.background {
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 100vw;
+	height: 100vh;
+	z-index: 9999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	.registration-container {
+		position: relative;
+		width: 90%;
+		z-index: 10;
+		max-width: 1070px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #f4f9ff;
+		border-radius: $border-radius-large;
+		box-shadow: 0px 0px 30px 0px #ffffff3d;
+		.left {
+			width: 50%;
+			img {
+				height: 625.504px;
+				width: 100%;
+				display: block;
+				border-radius: $border-radius-large 0 0 $border-radius-large;
+				object-fit: cover;
+			}
+		}
+
+		& > .right {
+			padding: 30px 65px;
+			width: 50%;
+			h3 {
+				color: $tertiary-color;
+				font-family: Plus Jakarta Sans;
+				font-size: 24px;
+				font-weight: 700;
+				line-height: 28.8px;
+				letter-spacing: 0.01em;
+				text-align: left;
+				margin-bottom: $spacing-xxl;
+				text-underline-position: from-font;
+				text-decoration-skip-ink: none;
+			}
+
+			.buttons {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border: 1px solid #00026f;
+				padding: 2px;
+				border-radius: $border-radius-circled;
+				.btn {
+					font-family: Plus Jakarta Sans;
+					font-size: 16px;
+					margin-top: 0;
+					font-weight: 600;
+					line-height: 22.68px;
+					letter-spacing: 0.01em;
+					text-align: left;
+					text-underline-position: from-font;
+					text-decoration-skip-ink: none;
+					padding: $spacing-sm 0 !important;
+					&:first-child {
+						background-color: #00026f;
+						color: $secondary-color;
+					}
+					&:last-child {
+						color: #00026f;
+						&:hover {
+							color: $secondary-color;
+							background-color: #00026f;
+						}
+					}
+				}
+			}
+
+			.fast-login {
+				margin: $spacing-xxl 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				button {
+					margin-right: $spacing-xxl;
+					transition: 0.2s;
+					transform: scale(1);
+					&:hover {
+						transform: scale(1.1);
+					}
+					&:last-child {
+						margin-right: 0;
+					}
+					img {
+						width: 28px;
+						height: 28px;
+					}
+				}
+			}
+
+			.line {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: $spacing-xxl;
+				.left,
+				.right {
+					width: 44%;
+					height: 1px;
+					background-color: #7e8695;
+				}
+
+				p {
+					font-family: Plus Jakarta Sans;
+					font-size: 18px;
+					font-weight: 600;
+					line-height: 25.2px;
+					color: #7e8695;
+
+					letter-spacing: 0.01em;
+					text-align: left;
+					text-underline-position: from-font;
+					text-decoration-skip-ink: none;
+				}
+			}
+
+			.input-container {
+				margin-bottom: $spacing-lg;
+				&.last {
+					margin-bottom: $spacing-sm;
+				}
+				&:last-child .styled-input {
+					font-family: Plus Jakarta Sans;
+					font-size: 16px;
+					font-weight: 400;
+					line-height: 20.16px;
+					letter-spacing: 0.01em;
+					text-align: left;
+					text-underline-position: from-font;
+					text-decoration-skip-ink: none;
+				}
+
+				.input-label {
+					font-family: Plus Jakarta Sans;
+					font-size: 12px;
+					font-weight: 400;
+					line-height: 18px;
+					text-align: left;
+					text-underline-position: from-font;
+					text-decoration-skip-ink: none;
+				}
+			}
+
+			i {
+				font-family: Segoe UI;
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 15.96px;
+				text-align: left;
+				text-underline-position: from-font;
+				text-decoration-skip-ink: none;
+				color: $tertiary-color;
+
+				a {
+					font-family: Segoe UI;
+					color: $tertiary-color;
+					font-size: 12px;
+					font-weight: 600;
+					line-height: 15.96px;
+					text-align: left;
+					text-decoration-line: underline;
+					text-decoration-style: solid;
+					text-underline-position: from-font;
+					text-decoration-skip-ink: none;
+				}
+			}
+
+			& > .btn {
+				margin-top: $spacing-xxl;
+				font-size: 18px;
+				font-weight: 500;
+				line-height: 25.2px;
+				text-align: left;
+				text-underline-position: from-font;
+				text-decoration-skip-ink: none;
+				background-color: #010abc;
+				color: $secondary-color;
+				&:hover {
+					background-color: #00026f;
+				}
+			}
+		}
+
+		.close {
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			left: 100%;
+			cursor: pointer;
+			top: 0;
+			transition: 0.4s;
+			transform: translateX(-100%) translate(-36px, 36px);
+			span {
+				display: block;
+				width: 20px;
+				height: 2px;
+				background-color: $tertiary-color;
+				&:first-child {
+					transform: rotate(45deg);
+				}
+				&:last-child {
+					transform: translateY(-1.5px) rotate(-45deg);
+				}
+			}
+
+			&:hover {
+				transform: translateX(-100%) translate(-36px, 36px) scale(1.2);
+			}
+		}
+	}
+}
+
+.input-container {
+	position: relative;
+	width: 100%;
+	max-width: 400px;
+}
+
+.styled-input {
+	width: 100%;
+	padding: 10px 15px;
+	font-size: 16px;
+	border: 1px solid #d1d1d1;
+	border-radius: 4px;
+	outline: none;
+	background-color: #f9fbff;
+	transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.styled-input:focus {
+	border-color: #007bff;
+	box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+.input-label {
+	position: absolute;
+	top: 50%;
+	left: 15px;
+	transform: translateY(-50%);
+	font-size: 14px;
+	color: #b1b1b1;
+	pointer-events: none;
+	transition: 0.2s;
+}
+
+.styled-input:focus + .input-label,
+.styled-input:not(:placeholder-shown) + .input-label {
+	top: -5px;
+	left: 12px;
+	font-size: 12px;
+	color: #007bff;
+	background-color: #f9fbff;
+	padding: 0 4px;
+}
+
+.login {
+	.buttons {
+		.btn:last-child {
+			background-color: #00026f !important;
+			color: $secondary-color !important;
+		}
+		.btn:first-child {
+			color: #00026f !important;
+			background-color: $secondary-color !important;
+			&:hover {
+				color: $secondary-color !important;
+				background-color: #00026f !important;
+			}
+		}
+	}
+	.under {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.left {
+			display: flex;
+			align-items: center;
+			#confirm {
+			}
+
+			label {
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 18px;
+				color: $tertiary-color;
+				text-align: left;
+				text-underline-position: from-font;
+				text-decoration-skip-ink: none;
+				margin-left: $spacing-xs;
+			}
+		}
+
+		.right {
+			span {
+				cursor: pointer;
+				font-family: Plus Jakarta Sans;
+				font-size: 12px;
+				color: $tertiary-color;
+				font-weight: 600;
+				line-height: 18px;
+				text-align: left;
+				text-underline-position: from-font;
+				text-decoration-skip-ink: none;
+			}
+		}
+	}
+}

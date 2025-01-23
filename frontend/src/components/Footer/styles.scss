@@ -1,0 +1,100 @@
+@import '../../assets/styles/variables.scss';
+
+footer {
+	background-color: #00026f;
+	padding-top: 38px;
+	.container {
+		.top {
+			padding-bottom: 28px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.left {
+				.logo {
+					img {
+						width: 87px;
+					}
+				}
+			}
+
+			.center {
+				nav {
+					ul {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						li {
+							a {
+								transition: 0.2s;
+							}
+							&:hover {
+								a {
+									color: $tertiary-color-active !important;
+								}
+							}
+
+							a {
+								font-size: 16px;
+								font-weight: 500;
+								line-height: 24px;
+								letter-spacing: 0.005em;
+								text-align: left;
+								text-underline-position: from-font;
+								text-decoration-skip-ink: none;
+							}
+							margin-right: $spacing-5xl;
+							&:last-child {
+								margin-right: 0;
+							}
+						}
+					}
+				}
+			}
+
+			.right {
+				.soc {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					li {
+						cursor: pointer;
+						margin-right: $spacing-xxl;
+						width: 32px;
+						height: 32px;
+						background-color: $secondary-color;
+						border-radius: $border-radius-circle;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						transition: 0.2s;
+						&:hover {
+							transform: scale(1.06);
+						}
+						&:last-child {
+							margin-right: 0;
+						}
+						img {
+							width: 20px;
+						}
+					}
+				}
+			}
+		}
+
+		.bottom {
+			padding-top: 20px;
+			padding-bottom: 30px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-family: Segoe UI;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 18.62px;
+			text-align: center;
+			text-underline-position: from-font;
+			text-decoration-skip-ink: none;
+			border-top: 1px solid #f7f9fd80;
+		}
+	}
+}

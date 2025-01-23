@@ -1,0 +1,207 @@
+.league-page {
+	.navigation-links {
+		max-width: 860px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		ul {
+			display: flex;
+			align-items: center;
+			padding-left: 0;
+			list-style: none;
+			li {
+				margin-right: 5px;
+			}
+		}
+	}
+}
+// Fixtures Section
+.fixtures-section {
+	padding: 30px;
+	background-color: #ffffff;
+	border-radius: 8px;
+	max-width: 900px;
+	margin: 0 auto;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+	h2 {
+		font-size: 28px;
+		color: #333;
+		text-align: center;
+		margin-bottom: 20px;
+		font-weight: 700;
+	}
+
+	.gameweek-selector {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 25px;
+
+		label {
+			font-weight: 600;
+			margin-bottom: 5px;
+			margin-right: 10px;
+		}
+
+		select {
+			padding: 10px 15px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			font-size: 16px;
+			color: #333;
+			background-color: #fafafa;
+			transition: border-color 0.3s;
+		}
+	}
+}
+
+.fixtures-list {
+	.fixture-item {
+		background-color: #f7f9fc;
+		border: 1px solid #e6e9ef;
+		border-radius: 8px;
+		margin-bottom: 15px;
+		padding: 20px;
+		transition: transform 0.3s, box-shadow 0.3s;
+
+		&:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+		}
+
+		div {
+			font-size: 16px;
+			color: #555;
+			margin-bottom: 10px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
+			label {
+				font-weight: 600;
+				margin-right: 10px;
+				display: block;
+				margin-bottom: 5px;
+				margin-top: 15px;
+			}
+
+			input[type='text'],
+			input[type='datetime-local'],
+			select {
+				padding: 8px;
+				font-size: 16px;
+				border: 1px solid #ccc;
+				width: 100%;
+				box-sizing: border-box;
+				border-radius: 4px;
+				color: #333;
+				background-color: #fafafa;
+				transition: border-color 0.3s;
+
+				&:focus {
+					border-color: #007bff;
+					outline: none;
+					background-color: #fff;
+				}
+			}
+		}
+
+		.two-competitors {
+			padding: 20px 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.competitors {
+			width: 40%;
+			display: flex;
+			align-items: center;
+
+			img {
+				width: 40px;
+				height: 40px;
+				object-fit: contain;
+			}
+
+			select {
+				width: 100%;
+
+				margin-left: 10px;
+				&.right-club-select {
+					margin-right: 10px;
+				}
+				box-sizing: border-box;
+			}
+
+			p {
+				margin: 0;
+				margin: 0 10px;
+				font-weight: 500;
+			}
+		}
+
+		.score {
+			margin-bottom: 4px;
+
+			input[type='text'] {
+				width: 100%;
+				text-align: center;
+			}
+		}
+
+		h4 {
+			text-align: center;
+			width: 20%;
+			font-size: 20px;
+			color: #333;
+		}
+	}
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+	.fixtures-section {
+		padding: 20px;
+
+		.gameweek-selector {
+			flex-direction: column;
+
+			label {
+				margin-bottom: 5px;
+			}
+
+			select {
+				width: 100%;
+			}
+		}
+
+		.fixtures-list {
+			.fixture-item {
+				padding: 15px;
+
+				.competitors {
+					flex-direction: column;
+
+					img {
+						margin-bottom: 10px;
+					}
+
+					select {
+						width: 100%;
+					}
+				}
+
+				h4 {
+					margin: 15px 0;
+				}
+			}
+
+			.btn {
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+}

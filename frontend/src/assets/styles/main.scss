@@ -1,0 +1,195 @@
+/******************************************************************************
+ * 1. BASE STYLES
+ ******************************************************************************/
+/* Box-sizing rules */
+html {
+	box-sizing: border-box;
+	font-size: $font-size-base; // Set base font size from variables
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+/* Body defaults */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: $font-family-primary;
+	font-size: $font-size-base;
+	color: $secondary-color;
+	background: $primary-color;
+	line-height: 1.5;
+}
+button {
+	color: $secondary-color;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 $spacing-md;
+	font-family: $font-family-secondary;
+	font-weight: 700;
+	color: $secondary-color;
+}
+
+h1 {
+	font-size: $font-size-xxxl;
+}
+
+h2 {
+	font-size: $font-size-xxl;
+}
+
+/* Paragraphs */
+p {
+	font-size: $font-size-base;
+}
+
+/* Links */
+a {
+	color: $secondary-color;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
+/* Lists */
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	list-style-position: outside;
+}
+
+/******************************************************************************
+ * 2. GLOBAL CLASSES & UTILITIES
+ ******************************************************************************/
+/* A simple container for consistent horizontal padding */
+.container {
+	max-width: 1160px;
+	margin: 0 auto;
+	padding: 0 0;
+	width: 95%;
+}
+
+/* Example button style */
+.btn {
+	background: #ffffff4d;
+	color: $secondary-color;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+	width: 100%;
+	padding: $spacing-md 0;
+	font-family: $font-family-primary;
+	font-size: $font-size-lg;
+	border: none;
+	border-radius: $border-radius-circled;
+	cursor: pointer;
+	text-align: center;
+	transition: filter 0.2s ease-in-out;
+	border: 1px solid #ffffff;
+	box-shadow: 0px 4px 20px 0px #ffffff26;
+	transition: 0.3s;
+	&:hover {
+		color: $primary-color-no-gradient;
+		background-color: white;
+	}
+	img {
+		width: 32px;
+		height: 32px;
+	}
+
+	.ball {
+		margin-left: $spacing-lg;
+		position: relative;
+		& > img:last-child {
+			position: absolute;
+			opacity: 0;
+			transition: 0.3s;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	&:hover {
+		.ball > img:last-child {
+			opacity: 1;
+		}
+	}
+	&:disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
+}
+
+/******************************************************************************
+ * 3. MEDIA QUERY MIXIN (OPTIONAL EXAMPLE)
+ * This uses the breakpoints from your variables file and can be extended
+ * for responsive styling as needed.
+ ******************************************************************************/
+@mixin respond-to($breakpoint) {
+	@if $breakpoint == xs {
+		@media #{$media-xs} {
+			@content;
+		}
+	} @else if $breakpoint == sm {
+		@media #{$media-sm} {
+			@content;
+		}
+	} @else if $breakpoint == md {
+		@media #{$media-md} {
+			@content;
+		}
+	} @else if $breakpoint == lg {
+		@media #{$media-lg} {
+			@content;
+		}
+	} @else if $breakpoint == xl {
+		@media #{$media-xl} {
+			@content;
+		}
+	}
+}
+
+.pr {
+	position: relative;
+}
+h2.title {
+	margin-top: $spacing-7xl;
+	font-family: Plus Jakarta Sans;
+	font-size: 36px;
+	display: inline-block;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 700;
+	border-bottom: 2px solid #ffffff;
+	line-height: 43.2px;
+	letter-spacing: 0.01em;
+	text-align: left;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+	padding-bottom: 6px;
+	margin-bottom: $spacing-6xl;
+}
+
+.non-visible {
+	opacity: 0;
+	transform: translateY(25px);
+}
+.visible {
+	transform: translateY(0px);
+	opacity: 1;
+}

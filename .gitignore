@@ -1,0 +1,55 @@
+# Root level ignores
+node_modules/
+.env
+.DS_Store
+dist/
+build/
+coverage/
+.vscode/
+.idea/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Ignore logs
+logs
+*.log
+logs/*.log
+
+# Ignore OS generated files
+Thumbs.db
+.DS_Store
+
+# React (Frontend) ignores
+/frontend/node_modules/
+/frontend/build/
+/frontend/.env
+/frontend/.DS_Store
+/frontend/coverage/
+/frontend/yarn.lock
+/frontend/package-lock.json
+
+# React (Admin) ignores
+/admin/node_modules/
+/admin/build/
+/admin/.env
+/admin/.DS_Store
+/admin/coverage/
+/admin/yarn.lock
+/admin/package-lock.json
+
+# Node.js (Backend) ignores
+/backend/node_modules/
+/backend/.env
+/backend/.DS_Store
+/backend/coverage/
+/backend/dist/
+/backend/package-lock.json
+/backend/yarn.lock
+
+# Optional: if you're using Docker
+docker-compose.yml
+.dockerignore
+Dockerfile
