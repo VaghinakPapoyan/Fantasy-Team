@@ -11,7 +11,6 @@ import { useSelector } from "react-redux";
 export default function Header({ openRegistrationModal }) {
   const { user } = useSelector((state) => state.user);
 
-<<<<<<< HEAD
 	const [showUserDropdown, setShowUserDropdown] = useState(false)
 
 	const toggleShowDropdown = () => {
@@ -320,5 +319,4 @@ export default function Header({ openRegistrationModal }) {
       </header>
     );
   }
->>>>>>> parent of bd2bd80 (Merge branch 'main' of https://github.com/VaghinakPapoyan/Fantasy-Team)
 }
