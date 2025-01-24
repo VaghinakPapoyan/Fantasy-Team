@@ -1,7 +1,7 @@
 @import "../../../../assets/styles/variables.scss";
 
 .fix {
-  background-color: $tertiary-color-20;
+  background-color: $primary-color-bold;
   padding-top: 70px;
   padding-bottom: 90px;
   .container {
@@ -13,18 +13,23 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    .dn__title {
+      span {
+        color: $secondary-color !important;
+      }
+    }
     &__title {
-      color: $tertiary-color;
+      color: $secondary-color;
       font-size: $font-size-xxl;
       max-width: max-content;
-      border-bottom: 1px solid $tertiary-color;
+      border-bottom: 1px solid $secondary-color;
       font-weight: 700;
     }
     &__selectors {
       display: flex;
       align-items: center;
       gap: 90px;
-      color: $tertiary-color;
+      color: $secondary-color;
     }
   }
   &__blocks {
@@ -42,14 +47,15 @@
       width: 100%;
       align-items: center;
       justify-content: space-between;
+
       .title {
         font-weight: 600;
         font-size: $font-size-xl;
-        color: black;
+        color: $secondary-color;
       }
       .time {
-        background: $primary-color;
-        color: white;
+        background: $secondary-color;
+        color: $primary-color-no-gradient;
         padding: 10px;
         border-radius: 5px;
 
@@ -69,8 +75,7 @@
     align-items: center;
     gap: 32px;
     border-radius: 10px;
-    background-color: white;
-    border: 1px solid #d8e8fe;
+    background-color: #133593 !important;
     padding: 0px 24px;
     &__team {
       display: flex;
@@ -79,7 +84,7 @@
       .title {
         font-weight: 600;
         font-size: $font-size-lg;
-        color: $tertiary-color;
+        color: $secondary-color;
       }
     }
     &__noun {
@@ -88,6 +93,7 @@
         position: absolute;
         top: 50%;
         left: 50%;
+        color: black;
         transform: translate(-50%, -50%);
 
         font-weight: 600;

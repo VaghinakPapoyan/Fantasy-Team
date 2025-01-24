@@ -14,6 +14,8 @@ import "./styles.scss";
 import { useSelector } from "react-redux";
 import Leagues from "./components/League/League.jsx";
 import { FixturesAuth } from "./components/FixturesAuth/index.jsx";
+import { HomeSection } from "./components/Reklam/index.jsx";
+import DesignComponent from "../../components/Design/index.jsx";
 export default function Homepage({
   registrationModalOpened,
   loginModalOpened,
@@ -28,11 +30,16 @@ export default function Homepage({
   });
   if (isLogin) {
     return (
-      <main>
+      <main className="home__logined">
         <Leagues />
-        <Features />
-        <FixturesAuth />
-        <Rewards />
+        <DesignComponent>
+          <HomeSection />
+          <Features />
+        </DesignComponent>
+        <div className="home__block">
+          <FixturesAuth />
+          <Rewards />
+        </div>
         {registrationModalOpened ? (
           <Registration
             closeAllModals={closeAllModals}

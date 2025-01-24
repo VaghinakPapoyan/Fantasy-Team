@@ -1,7 +1,7 @@
 @import "../../../../assets/styles/variables.scss";
 
 .leagues {
-  background-color: $tertiary-color-20;
+  // background-color: $tertiary-color-20;
   padding: 70px 0px;
   .container {
     display: flex;
@@ -17,17 +17,17 @@
       flex-direction: column;
       gap: 24px;
       .title {
-        color: $tertiary-color;
+        color: $secondary-color;
         font-size: $font-size-xxl;
         max-width: max-content;
-        border-bottom: 1px solid $tertiary-color;
+        border-bottom: 1px solid $secondary-color;
         font-weight: 500;
         span {
           font-weight: 700;
         }
       }
       .subtitle {
-        color: $tertiary-color;
+        color: $secondary-color;
         font-size: $font-size-lg;
         font-weight: 400;
       }
@@ -40,7 +40,7 @@
       .text {
         font-weight: 400;
         font-size: $font-size-md;
-        color: $tertiary-color;
+        color: $secondary-color;
       }
     }
   }
@@ -91,6 +91,9 @@
     }
     &__col {
       border-bottom: 1px solid #edf1f6;
+      &:last-child {
+        border: none;
+      }
       &__title {
         display: flex;
         align-items: center;
