@@ -122,6 +122,25 @@ export const resendVerificationThunk = createAsyncThunk(
 );
 
 /**
+ * Logs out the user.
+ * - Calls the API to clear the session (if using cookies) or token (if using tokens).
+ */
+export const logoutUserThunk = createAsyncThunk(
+  "user/logoutUser",
+  async (_, { rejectWithValue }) => {
+    try {
+      await authService.logoutUser();
+      // No specific data returned; just a success status or message typically
+      return;
+    } catch (error) {
+      const errorMessage =
+        error?.response?.data?.message || error.message || "Logout failed.";
+      return rejectWithValue(errorMessage);
+    }
+  }
+);
+
+/**
  * Optional: Fetch account if your backend uses an HTTP-only cookie.
  * - Typically called on page load to restore user data.
  */
@@ -155,8 +174,7 @@ const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    // Clear user from Redux (logout).
-    // If your backend uses cookies, call an API to clear the session cookie, too.
+    // Synchronous logout reducer – clears user from Redux state.
     logoutUser(state) {
       state.user = null;
       state.error = null;
@@ -193,7 +211,6 @@ const userSlice = createSlice({
       })
       .addCase(loginUserThunk.fulfilled, (state, action) => {
         state.loading = false;
-        // The payload is the user we fetched from /account
         state.user = action.payload;
       })
       .addCase(loginUserThunk.rejected, (state, action) => {
@@ -209,7 +226,6 @@ const userSlice = createSlice({
       })
       .addCase(verifyUserThunk.fulfilled, (state, action) => {
         state.loading = false;
-        // The payload is the verified user from /account
         state.user = action.payload;
         state.verificationSuccess = true;
       })
@@ -224,13 +240,13 @@ const userSlice = createSlice({
         // Optionally track a resend loading state
       })
       .addCase(resendVerificationThunk.fulfilled, (state, action) => {
-        // Maybe store a success message or boolean
+        // Optionally handle success message
       })
       .addCase(resendVerificationThunk.rejected, (state, action) => {
         state.error = action.payload;
       })
 
-      // ===== fetchAccountThunk (optional) =====
+      // ===== fetchAccountThunk =====
       .addCase(fetchAccountThunk.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -244,7 +260,7 @@ const userSlice = createSlice({
         state.error = action.payload;
       })
 
-      // REQUEST PASSWORD RESET
+      // ===== requestPasswordResetThunk =====
       .addCase(requestPasswordResetThunk.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -252,14 +268,14 @@ const userSlice = createSlice({
       })
       .addCase(requestPasswordResetThunk.fulfilled, (state, action) => {
         state.loading = false;
-        state.message = action.payload.message; // e.g. "Password reset link has been sent."
+        state.message = action.payload.message;
       })
       .addCase(requestPasswordResetThunk.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       })
 
-      // RESET PASSWORD
+      // ===== resetPasswordThunk =====
       .addCase(resetPasswordThunk.pending, (state) => {
         state.loading = true;
         state.error = null;
@@ -270,6 +286,22 @@ const userSlice = createSlice({
         state.message = action.payload.message;
       })
       .addCase(resetPasswordThunk.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      })
+
+      // ===== logoutUserThunk =====
+      .addCase(logoutUserThunk.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(logoutUserThunk.fulfilled, (state) => {
+        // Clear user state on successful logout
+        state.user = null;
+        state.loading = false;
+        state.error = null;
+      })
+      .addCase(logoutUserThunk.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       });

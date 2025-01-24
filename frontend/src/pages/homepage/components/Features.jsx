@@ -1,6 +1,7 @@
 import React from 'react'
 import useInView from '../../../utils/useInView.js'
 
+<<<<<<< HEAD
 import FeaturesImage1 from '../../../assets/images/features-1.png'
 import FeaturesImage2 from '../../../assets/images/features-2.png'
 import FeaturesImage3 from '../../../assets/images/features-3.png'
@@ -89,4 +90,70 @@ export default function Features() {
 			</div>
 		</section>
 	)
+=======
+import FeaturesImage1 from "../../../assets/images/features-1.png";
+import FeaturesImage2 from "../../../assets/images/features-2.png";
+import FeaturesImage3 from "../../../assets/images/features-3.png";
+import FeaturesImage4 from "../../../assets/images/features-4.png";
+
+export default function Features() {
+  return (
+    <section className="features">
+      <div className="container">
+        <h2 className="title">Features</h2>
+        <div className="features-list">
+          <div className="feature">
+            <div className="feature-body">
+              <img src={FeaturesImage1} alt="feature" />
+              <div className="right">
+                <h3>Customize you team</h3>
+                <p>
+                  Build your dream squad with personalized formations,
+                  transfers, and custom kits. Take control and lead your team to
+                  victory!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="feature">
+            <div className="feature-body">
+              <img src={FeaturesImage2} alt="feature" />
+              <div className="right">
+                <h3>Earn badges, points, XP</h3>
+                <p>
+                  Rise through the ranks by earning XP and unlocking badges.
+                  Prove your skills and showcase your achievements!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="feature">
+            <div className="feature-body">
+              <img src={FeaturesImage3} alt="feature" />
+              <div className="right">
+                <h3>Win Prizes</h3>
+                <p>
+                  Compete for cash, rewards, and bonuses. Your strategy and
+                  football knowledge can lead you to big victories!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="feature">
+            <div className="feature-body">
+              <img src={FeaturesImage4} alt="feature" />
+              <div className="right">
+                <h3>H2H competitions</h3>
+                <p>
+                  Challenge rivals in intense H2H battles. Track your wins and
+                  outplay your competitors to be the ultimate champion!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+>>>>>>> parent of 6afb8c6 (FIXING)
 }
