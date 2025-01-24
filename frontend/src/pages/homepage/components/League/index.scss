@@ -17,19 +17,31 @@
       flex-direction: column;
       gap: 24px;
       .title {
-        color: $secondary-color;
-        font-size: $font-size-xxl;
+        font-family: Plus Jakarta Sans;
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 43.2px;
+        letter-spacing: 0.01em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+
         max-width: max-content;
         border-bottom: 1px solid $secondary-color;
-        font-weight: 500;
         span {
           font-weight: 700;
         }
       }
       .subtitle {
-        color: $secondary-color;
-        font-size: $font-size-lg;
+        //styleName: Paragraph/medium/regular;
+        font-family: Segoe UI;
+        font-size: 20px;
         font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0.01em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
       }
     }
     &__right {

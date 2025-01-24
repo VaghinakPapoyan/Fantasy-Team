@@ -20,21 +20,23 @@
   &__content {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 150%;
     padding: 12px 8px;
     background-color: $secondary-color;
     border-radius: 12px;
 
     flex-direction: column;
-    gap: 4px;
+    gap: 12px;
 
     &__item {
       display: flex;
       align-items: center;
       gap: 8px;
       font-weight: 600;
+      padding: 8px;
       cursor: pointer;
       font-size: $font-size-lg;
+      white-space: nowrap;
       color: $tertiary-color;
     }
   }

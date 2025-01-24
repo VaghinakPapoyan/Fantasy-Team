@@ -10,7 +10,7 @@ export const DropDown = ({
   isHaveIcon,
   icon,
 }) => {
-  const title = isHaveIcon ? selectedOption.value : selectedOption;
+  const title = selectedOption.label;
   const { isOpen, setIsOpen, ref } = useOutsideClickDetector(false);
 
   return (
@@ -18,12 +18,11 @@ export const DropDown = ({
       <div
         className="dn__title"
         onClick={(e) => {
-          setIsOpen(!isOpen);
+          setIsOpen(true);
         }}
       >
-        <span>
-          {isHaveIcon && <img src={icon} />} {title}
-        </span>
+        {isHaveIcon && <img src={selectedOption.icon} width={40} height={50} />}
+        <span>{title}</span>
         <img
           src={ArrowImage}
           style={{ rotate: isOpen ? "180deg" : "0deg" }}
@@ -36,10 +35,16 @@ export const DropDown = ({
           className={`dn__content${isOpen ? " dn__content__open" : ""}`}
         >
           {options.map((e) => {
-            const title = isHaveIcon ? e.value : e;
+            const title = e.label;
             return (
-              <div className="dn__content__item" onClick={() => select(e)}>
-                {isHaveIcon && <img src={e.icon} />}
+              <div
+                className="dn__content__item"
+                onClick={() => {
+                  select(e);
+                  setIsOpen(false);
+                }}
+              >
+                {isHaveIcon && <img width={40} height={50} src={e.icon} />}
                 {title}
               </div>
             );

@@ -6,12 +6,9 @@ const useOutsideClickDetector = (initialState = false) => {
 
   const handleClickOutside = (event) => {
     event.stopPropagation();
+    event.preventDefault();
     if (ref.current && !ref.current.contains(event.target)) {
-      setTimeout(() => {
-        if (isOpen) {
-          setIsOpen(false);
-        }
-      }, 0);
+      setIsOpen(false);
     }
   };
 
