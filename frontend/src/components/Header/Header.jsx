@@ -18,12 +18,6 @@ export default function Header({ openRegistrationModal }) {
 		setShowUserDropdown(state => !state)
 	}
 
-	const [showUserDropdown, setShowUserDropdown] = useState(false)
-
-	const toggleShowDropdown = () => {
-		setShowUserDropdown(state => !state)
-	}
-
 	if (user) {
 		return (
 			<header className='header'>
