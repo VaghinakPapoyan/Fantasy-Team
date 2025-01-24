@@ -18,6 +18,12 @@ export default function Header({ openRegistrationModal }) {
 		setShowUserDropdown(state => !state)
 	}
 
+	const [showUserDropdown, setShowUserDropdown] = useState(false)
+
+	const toggleShowDropdown = () => {
+		setShowUserDropdown(state => !state)
+	}
+
 	if (user) {
 		return (
 			<header className='header'>
@@ -71,7 +77,7 @@ export default function Header({ openRegistrationModal }) {
 						<div className='left'>
 							<img src={bellImage} alt='bell' />
 						</div>
-						<div className='right' onClick={toggleShowDropdown}>
+						<div className='right'>
 							<img src={userImage} alt='user' />
 							<img
 								src={ArrowImage}
