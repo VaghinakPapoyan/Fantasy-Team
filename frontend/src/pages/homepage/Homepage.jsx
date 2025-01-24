@@ -26,7 +26,6 @@ export default function Homepage({
   const isLogin = useSelector((state) => {
     return !!state.user.user; // get user from redux
   });
-
   if (isLogin) {
     return (
       <main>
