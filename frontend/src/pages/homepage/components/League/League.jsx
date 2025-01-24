@@ -77,6 +77,38 @@ export default function Leagues() {
                   </div>
                 </td>
               </tr>
+              <tr className="leagues__table__col">
+                <td>
+                  <div className="leagues__table__col__title">
+                    <img src={SlideImage1} alt="" />
+                    Premiere League
+                  </div>
+                </td>
+                <td>H2M</td>
+                <td>9532</td>
+                <td>Live</td>
+                <td style={{ textAlign: "center" }}>
+                  25 Dec 2024 <br />
+                  21:15
+                </td>
+
+                <td>
+                  <div className="leagues__table__col__price">
+                    <div className="leagues__table__col__price__new">
+                      20 000AMD
+                    </div>
+                    <div className="leagues__table__col__price__old">
+                      49 990AMD{" "}
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div className="leagues__table__col__buttons">
+                    <div className="leagues__table__col__try">Try</div>
+                    <div className="leagues__table__col__buy">Buy</div>
+                  </div>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
