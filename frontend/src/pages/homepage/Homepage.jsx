@@ -31,7 +31,6 @@ export default function Homepage({
       <main>
         <Leagues />
         <Features />
-
         <FixturesAuth />
         <Rewards />
         {registrationModalOpened ? (
