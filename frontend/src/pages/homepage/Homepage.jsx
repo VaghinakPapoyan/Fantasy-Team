@@ -26,13 +26,12 @@ export default function Homepage({
   const isLogin = useSelector((state) => {
     return !!state.user.user; // get user from redux
   });
-
+  let x = (s) => {};
   if (isLogin) {
     return (
       <main>
         <Leagues />
         <Features />
-
         <FixturesAuth />
         <Rewards />
         {registrationModalOpened ? (
