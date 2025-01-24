@@ -1,0 +1,98 @@
+@import "../../../../assets/styles/variables.scss";
+
+.fix {
+  background-color: $tertiary-color-20;
+  padding-top: 70px;
+  padding-bottom: 90px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__title {
+      color: $tertiary-color;
+      font-size: $font-size-xxl;
+      max-width: max-content;
+      border-bottom: 1px solid $tertiary-color;
+      font-weight: 700;
+    }
+    &__selectors {
+      display: flex;
+      align-items: center;
+      gap: 90px;
+      color: $tertiary-color;
+    }
+  }
+  &__blocks {
+    width: 71%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    &__top {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      .title {
+        font-weight: 600;
+        font-size: $font-size-xl;
+        color: black;
+      }
+      .time {
+        background: $primary-color;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+
+        font-weight: 600;
+        font-size: $font-size-lg;
+      }
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  &__match {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #d8e8fe;
+    padding: 0px 24px;
+    &__team {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      .title {
+        font-weight: 600;
+        font-size: $font-size-lg;
+        color: $tertiary-color;
+      }
+    }
+    &__noun {
+      position: relative;
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        font-weight: 600;
+        font-size: $font-size-lg;
+      }
+    }
+  }
+}

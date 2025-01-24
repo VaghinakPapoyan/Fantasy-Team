@@ -1,13 +1,13 @@
 // Primary Color
 $primary-color: linear-gradient(
-	270.05deg,
-	#0129e3 -15.35%,
-	#00036a 103.52%
+  270.05deg,
+  #0129e3 -15.35%,
+  #00036a 103.52%
 ); // Main brand color
 $primary-color-reverted: linear-gradient(
-	90.05deg,
-	#0129e3 -15.35%,
-	#00036a 103.52%
+  90.05deg,
+  #0129e3 -15.35%,
+  #00036a 103.52%
 );
 $primary-color-no-gradient: #010abc; // Main brand color
 
@@ -20,14 +20,17 @@ $tertiary-color: #1b212b; // Secondary accent color
 // Tertiary Color Active
 $tertiary-color-active: rgba(49, 191, 249, 1); // Secondary accent color Active
 
+//
+$tertiary-color-20: #f4f9ff;
+
 // Feedback Colors
 $success-color: #28a745;
 $error-color: #dc3545;
 $warning-color: #ffc107;
 
 // Font Families
-$font-family-primary: 'Plus Jakarta Sans', sans-serif;
-$font-family-secondary: 'Segoe UI', sans-serif;
+$font-family-primary: "Plus Jakarta Sans", sans-serif;
+$font-family-secondary: "Segoe UI", sans-serif;
 
 // Font Sizes
 $font-size-base: 16px; // Default font size
@@ -69,11 +72,11 @@ $breakpoint-lg: 1024px; // Laptops
 $breakpoint-xl: 1280px; // Desktops
 
 // Media Queries
-$media-xs: '(max-width: #{$breakpoint-xs})';
-$media-sm: '(max-width: #{$breakpoint-sm})';
-$media-md: '(max-width: #{$breakpoint-md})';
-$media-lg: '(max-width: #{$breakpoint-lg})';
-$media-xl: '(max-width: #{$breakpoint-xl})';
+$media-xs: "(max-width: #{$breakpoint-xs})";
+$media-sm: "(max-width: #{$breakpoint-sm})";
+$media-md: "(max-width: #{$breakpoint-md})";
+$media-lg: "(max-width: #{$breakpoint-lg})";
+$media-xl: "(max-width: #{$breakpoint-xl})";
 
 // Heights
 $header-height: 110px;

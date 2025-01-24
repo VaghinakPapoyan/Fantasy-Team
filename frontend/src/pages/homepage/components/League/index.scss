@@ -1,0 +1,147 @@
+@import "../../../../assets/styles/variables.scss";
+
+.leagues {
+  background-color: $tertiary-color-20;
+  padding: 70px 0px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__left {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      .title {
+        color: $tertiary-color;
+        font-size: $font-size-xxl;
+        max-width: max-content;
+        border-bottom: 1px solid $tertiary-color;
+        font-weight: 500;
+        span {
+          font-weight: 700;
+        }
+      }
+      .subtitle {
+        color: $tertiary-color;
+        font-size: $font-size-lg;
+        font-weight: 400;
+      }
+    }
+    &__right {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 8px;
+      .text {
+        font-weight: 400;
+        font-size: $font-size-md;
+        color: $tertiary-color;
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    background-color: $secondary-color;
+    border-radius: 8px;
+    gap: 8px;
+    &__head {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 20px 24px;
+      .title {
+        font-weight: 600;
+        font-size: $font-size-lg;
+        color: $tertiary-color;
+      }
+      .subtitle {
+        font-weight: 400;
+        font-size: $font-size-base;
+        color: #5a6576;
+      }
+    }
+  }
+  &__table {
+    thead {
+      background-color: $tertiary-color-20;
+      th {
+        padding: 12px 24px;
+        color: #5a6576;
+        font-weight: 500;
+        font-size: $font-size-base;
+      }
+    }
+    td {
+      padding: 16px 20px 8px 20px;
+      color: #5a6576;
+      font-weight: 400;
+      font-size: $font-size-sm;
+      img {
+        border-radius: 12px;
+        width: 70px;
+        height: 62px;
+        object-fit: contain;
+      }
+    }
+    &__col {
+      border-bottom: 1px solid #edf1f6;
+      &__title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 600 !important;
+        font-size: $font-size-md !important;
+        color: $tertiary-color !important;
+      }
+      &__price {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 8px;
+        &__new {
+          color: $primary-color-no-gradient;
+          font-weight: 600;
+          font-size: $font-size-md;
+        }
+        &__old {
+          font-weight: 400;
+          font-size: $font-size-sm;
+          text-decoration: line-through;
+        }
+      }
+      &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        div {
+          padding: 9px 24px;
+          border-radius: 20px;
+          font-family: $font-family-primary;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          min-width: 94.5px;
+          justify-content: center;
+          text-align: center;
+          font-weight: 500;
+          font-size: $font-size-base;
+          line-height: 20.16px;
+        }
+      }
+      &__try {
+        border: 1px solid $primary-color-no-gradient;
+        color: $primary-color-no-gradient;
+      }
+      &__buy {
+        background-color: $primary-color-no-gradient;
+        color: $secondary-color;
+      }
+    }
+  }
+}

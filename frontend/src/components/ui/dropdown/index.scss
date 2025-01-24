@@ -1,0 +1,44 @@
+@import "../../../assets/styles/variables.scss";
+
+.dn {
+  position: relative;
+  &__title {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    span {
+      font-weight: 600;
+      font-size: $font-size-lg;
+      color: $tertiary-color;
+    }
+    cursor: pointer;
+
+    img {
+      transition: 0.3s;
+    }
+  }
+  &__content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    padding: 12px 8px;
+    background-color: $secondary-color;
+    border-radius: 12px;
+
+    flex-direction: column;
+    gap: 4px;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: $font-size-lg;
+      color: $tertiary-color;
+    }
+  }
+  &__content__open {
+    display: flex;
+  }
+}
