@@ -82,9 +82,15 @@
       align-items: center;
       gap: 16px;
       .title {
+        //styleName: H5;
+        font-family: Plus Jakarta Sans;
+        font-size: 20px;
         font-weight: 600;
-        font-size: $font-size-lg;
-        color: $secondary-color;
+        line-height: 24px;
+        letter-spacing: 0.01em;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
       }
     }
     &__noun {

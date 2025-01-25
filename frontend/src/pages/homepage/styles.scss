@@ -915,9 +915,6 @@ section.rewards {
   flex-direction: column;
   width: 100%;
   background-color: $primary-color-bold;
-  div,
-  section {
-  }
 }
 
 .home__logined {
@@ -932,8 +929,12 @@ section.rewards {
     }
   }
   .rewards {
+    background-color: inherit !important;
     * {
       color: $secondary-color !important;
     }
+  }
+  .features {
+    padding-bottom: 70px;
   }
 }

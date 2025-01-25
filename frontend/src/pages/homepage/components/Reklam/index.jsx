@@ -1,6 +1,5 @@
 import "./index.scss";
 import image from "../../../../assets/images/homeIpad.png";
-
 export function HomeSection() {
   return (
     <div className="reklam">
